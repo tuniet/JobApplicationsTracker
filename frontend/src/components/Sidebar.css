@@ -1,0 +1,143 @@
+.sidebar {
+  width: 260px;
+  background: #13131a;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  border-right: 1px solid #292525;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 24px;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@font-face {
+    font-family: "Custom Font";
+    src: url("../assets/tan-pearl.otf") format("opentype");
+}
+
+.sidebar-title {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  padding-right: 5px;
+  padding-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar-title .title-job {
+    font-family: "Custom Font";
+    color: #C8A96E;
+    font-size: 1.2rem;
+}
+.sidebar-title .title-tracker {
+  font-family: "Custom Font";
+  color: #8B9CB0;
+  font-style: italic;
+  padding-left: 15px;
+  font-size: 1rem;
+  width: 100%;
+}
+.sidebar-header.collapsed{
+  justify-content: center;
+}
+.toggle-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 999px;
+}
+
+.toggle-btn.collapsed {
+  margin-right: none;
+}
+.toggle-btn:hover,
+.toggle-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  color: #8B9CB0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 100%;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 14px;
+  background: #13131a;
+  border: none;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  color: #8B9CB0;
+  width: 100%;
+}
+
+.nav-item.selected {
+  background: #221f21;
+  color: #C8A96E;
+  border-right: 4px solid #C8A96E;
+}
+
+.nav-item:hover,
+.nav-item:focus-visible {
+  background: #221f21;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus-visible .nav-icon {
+  filter: brightness(1.2);
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.nav-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

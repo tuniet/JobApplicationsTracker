@@ -1,0 +1,8 @@
+.dashboard-pages {
+  display: flex;
+}
+
+.content {
+  margin: auto;
+  width: 70vw;
+}

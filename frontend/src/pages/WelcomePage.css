@@ -1,0 +1,91 @@
+.welcome-page {
+	background-color: #0a0a0f;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.back-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image:
+        linear-gradient(#C8A96E 1px, transparent 1px),
+        linear-gradient(90deg, #C8A96E 1px, transparent 1px),
+        linear-gradient(90deg, #C8A96E 1px, transparent 1px);
+    background-size:
+        48px 48px,
+        48px 48px,
+        100% 100%;
+    background-position:
+        50% 50%,
+        50% 50%,
+        50% 0;
+    pointer-events: none;
+}
+.corner-tr,
+.corner-tl,
+.corner-bl,
+.corner-br {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	opacity: 0.3;
+}
+
+.corner-tr {
+	top: 24px;
+	right: 24px;
+	border-top: 1px solid #C8A96E;
+	border-right: 1px solid #C8A96E;
+}
+
+.corner-tl {
+	top: 24px;
+	left: 24px;
+	border-top: 1px solid #C8A96E;
+	border-left: 1px solid #C8A96E;
+}
+
+.corner-bl {
+	bottom: 24px;
+	left: 24px;
+	border-bottom: 1px solid #C8A96E;
+	border-left: 1px solid #C8A96E;
+}
+
+.corner-br {
+	bottom: 24px;
+	right: 24px;
+	border-bottom: 1px solid #C8A96E;
+	border-right: 1px solid #C8A96E;
+}
+
+.subtle-line{
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(200, 169, 110, 0.15), transparent);
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.login{
+	padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.screen-label{
+	font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gilt);
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+}
