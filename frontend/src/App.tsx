@@ -1,7 +1,8 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import WelcomePage from './pages/WelcomePage'
+import WelcomePage from './pages/Welcome'
 import DashboardPage from './pages/DashboardPages'
+import RegisterPage from './pages/Register';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

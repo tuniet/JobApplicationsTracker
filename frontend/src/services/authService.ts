@@ -1,6 +1,26 @@
-import type { RegisterData, LoginData, AuthResponse } from '../types/auth';
 
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+
+export interface RegisterData {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginData {
+  email: string;
+  password: string;
+}
+
+export interface AuthResponse {
+  token: string;
+  user: {
+    _id: string;
+    name: string;
+    email: string;
+  };
+}
+
 
 export const register = async (data: RegisterData): Promise<AuthResponse> => {
   const res = await fetch(`${BASE_URL}/users/register`, {

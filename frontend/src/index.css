@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
   margin: 0;
   background-color: #0a0a0f;
@@ -8,4 +11,9 @@ body{
 @font-face {
     font-family: "Custom Font";
     src: url("../assets/tan-pearl.otf") format("opentype");
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
